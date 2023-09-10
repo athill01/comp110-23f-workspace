@@ -1,6 +1,6 @@
-"""EX01 - Chardle - A cute step toward Worldle"""
+"""EX01 - Chardle - A cute step toward Worldle."""
 
-__author__ = 730664291
+__author__ = "730664291"
 
 my_five_letter_word = input("Enter a 5-character word: ")
 
@@ -14,7 +14,7 @@ if (len(my_single_character) != 1):
     print("Error: Character must be a single character.")
     exit(len(my_five_letter_word) != 1)
 
-characters_found = int == 0
+characters_found: int = 0
 
 print("Searching for " + my_single_character + " in " + my_five_letter_word)
 
@@ -39,5 +39,3 @@ if characters_found == 1:
     print(str(characters_found) + " instance of " + my_single_character + " found in " + my_five_letter_word)
 if characters_found > 1:
     print(str(characters_found) + " instances of " + my_single_character + " found in " + my_five_letter_word)
-
-
