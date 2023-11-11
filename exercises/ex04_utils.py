@@ -1,10 +1,12 @@
 """Implementing utility functions with lists."""
 
-__author__: "730664291"
+__author__ = "730664291"
 
 
-def all(list: list, value: int) -> bool:
-    # Checks to see if all values in the list are the same
+def all(list: list[int], value: int) -> bool:
+    """Determines if all values are equal to the inputed integer."""
+    if len(list) == 0:
+        return False
     list_idx: int = 0
     while list_idx < len(list):
         if list[list_idx] == value:
@@ -15,6 +17,7 @@ def all(list: list, value: int) -> bool:
 
 
 def max(input: list[int]) -> int:
+    """Pulls the max number from a list."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     list_idx: int = 0
@@ -28,6 +31,7 @@ def max(input: list[int]) -> int:
 
 
 def is_equal(list1: list[int], list2: list[int]) -> bool:
+    """Determines if each corresponding index within a list is equal."""
     if len(list1) != len(list2):
         return False
     idx: int = 0

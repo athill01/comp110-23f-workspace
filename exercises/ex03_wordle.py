@@ -6,21 +6,23 @@ GREEN_BOX = "\U0001F7E9"
 WHITE_BOX = "\U00002B1C"
 YELLOW_BOX = "\U0001F7E8"
 
+
 def contains_char(word: str, chr: str) -> bool:
-    """Checking if a character of secret word is located within the guess"""
+    """Checking if a character of secret word is located within the guess."""
     assert len(chr) == 1
 
     idx_count: int = 0
 
     while idx_count < len(word):
-         if chr == word[idx_count]:
-             return True
-         else:
-             idx_count += 1
+        if chr == word[idx_count]:
+            return True
+        else:
+            idx_count += 1
     return False
 
+
 def emojified(guess: str, secret: str) -> str:
-    """Convert index info into emojis"""
+    """Convert index info into emojis."""
     assert len(guess) == len(secret)
     str_stor = ""
 
@@ -36,6 +38,7 @@ def emojified(guess: str, secret: str) -> str:
         chr_count += 1
     return str_stor
 
+
 def input_guess(n: int) -> str:
     """The player's inputed guess."""
     my_guess: str = (input(f"Enter a { n } character word: "))
@@ -43,9 +46,9 @@ def input_guess(n: int) -> str:
         my_guess = str(input(f"That wasn't { n } chars! Try again: "))
     return (str(my_guess))
 
+
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-
     secret = "codes"
     sec_length = len(secret)
     n_turns = 1
@@ -63,6 +66,7 @@ def main() -> None:
         print(f"You won in {n_turns}/6 turns!")
     else:
         print("X/6 - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
