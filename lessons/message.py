@@ -24,7 +24,7 @@ class Email:
         self.message *= factor
     
 email_to_chiara: Email = Email("chiara", "You're a great TA! ", False)
-# email_to_chiara * 100
+email_to_chiara * 100
 print(email_to_chiara)
 email_to_lauren: Email = Email("lauren")
 print(email_to_lauren)
