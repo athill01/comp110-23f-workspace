@@ -13,3 +13,4 @@ while card_idx < 4:
         low_card = current_card
     card_idx += 1
 print(str(low_card) + " is the low card!")
+print(ord('B'))
